@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{5c7ea934-6f97-4eef-aed2-4063ae0db7b4}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{dddb4e1c-ef0e-4fcb-ae74-f2c5a5817331}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Header Files\vlc">
+      <UniqueIdentifier>{84cb789c-7063-4bd9-8a26-31fa79d5580b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\vlc\plugins">
+      <UniqueIdentifier>{8ceb49f5-9755-4666-8c00-3b63ff12430a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qvplayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qvplayer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qvplayer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_qvplayer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="qvplayer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qvplayer.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qvplayer.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_qvplayer.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\deprecated.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc_events.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc_media.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc_media_discoverer.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc_media_library.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc_media_list.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc_media_list_player.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc_media_player.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc_structures.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc_version.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\libvlc_vlm.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\vlc.h">
+      <Filter>Header Files\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_about.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_access.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_addons.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_aout.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_aout_volume.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_arrays.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_atomic.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_avcodec.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_bits.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_block.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_block_helper.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_charset.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_codec.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_common.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_config.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_config_cat.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_configuration.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_cpu.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_demux.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_dialog.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_epg.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_es.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_es_out.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_events.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_filter.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_fingerprinter.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_fourcc.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_fs.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_gcrypt.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_http.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_httpd.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_image.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_inhibit.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_input.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_input_item.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_keys.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_main.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_md5.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_media_library.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_messages.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_meta.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_meta_fetcher.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_mime.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_modules.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_mouse.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_mtime.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_network.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_objects.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_opengl.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_picture.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_picture_fifo.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_picture_pool.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_playlist.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_plugin.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_probe.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_rand.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_services_discovery.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_sout.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_spu.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_stream.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_strings.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_subpicture.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_text_style.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_threads.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_tls.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_url.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_variables.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_video_splitter.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_vlm.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_vout.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_vout_display.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_vout_osd.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_vout_window.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_xlib.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="vlc\plugins\vlc_xml.h">
+      <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
