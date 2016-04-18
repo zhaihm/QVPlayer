@@ -15,7 +15,8 @@ public:
 
 private slots:
 	void on_playBtn_clicked();
-	void on_exitBtn_clicked();
+	void on_pauseBtn_clicked();
+	void on_stopBtn_clicked();
 	void on_durationSlider_valueChanged(int value);
 
 private:

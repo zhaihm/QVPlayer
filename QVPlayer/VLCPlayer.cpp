@@ -32,6 +32,10 @@ void VLCPlayer::init(HWND hWnd)
 
 void VLCPlayer::play(const char *path /*= NULL*/)
 {
+	if (_instance == NULL || _mediaPlayer == NULL) {
+		qDebug() << "Media player not initialized!";
+		return;
+	}
 	if (path != NULL) {
 		libvlc_media_t *media;
 		if (NULL == (media = libvlc_media_new_path(_instance, path))) {
@@ -43,12 +47,56 @@ void VLCPlayer::play(const char *path /*= NULL*/)
 	libvlc_media_player_play(_mediaPlayer);
 }
 
+void VLCPlayer::pause()
+{
+	if (_mediaPlayer == NULL) {
+		qDebug() << "Media player not initialized!";
+		return;
+	}
+	libvlc_media_player_pause(_mediaPlayer);
+}
+
+void VLCPlayer::stop()
+{
+	if (_mediaPlayer == NULL) {
+		qDebug() << "Media player not initialized!";
+		return;
+	}
+	libvlc_media_player_stop(_mediaPlayer);
+}
+
+bool VLCPlayer::isPaused()
+{
+	if (_mediaPlayer == NULL) {
+		qDebug() << "Media player not initialized!";
+		return false;;
+	}
+	return libvlc_Paused == libvlc_media_player_get_state(_mediaPlayer);
+}
+
+bool VLCPlayer::isStopped()
+{
+	if (_mediaPlayer == NULL) {
+		qDebug() << "Media player not initialized!";
+		return false;;
+	}
+	return libvlc_Stopped == libvlc_media_player_get_state(_mediaPlayer);
+}
+
 void VLCPlayer::setDuration(int ms)
 {
+	if (_mediaPlayer == NULL) {
+		qDebug() << "Media player not initialized!";
+		return;
+	}
 	libvlc_media_player_set_time(_mediaPlayer, ms);
 }
 
 int VLCPlayer::length()
 {
+	if (_mediaPlayer == NULL) {
+		qDebug() << "Media player not initialized!";
+		return -1;
+	}
 	return libvlc_media_player_get_length(_mediaPlayer);
 }

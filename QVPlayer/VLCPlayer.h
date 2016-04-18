@@ -10,6 +10,10 @@ public:
 
 	void init(HWND hWnd);
 	void play(const char *path = NULL);
+	void pause();
+	void stop();
+	bool isPaused();
+	bool isStopped();
 	void setDuration(int ms);
 	int length();
 
