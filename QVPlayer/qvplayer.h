@@ -3,6 +3,7 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_qvplayer.h"
+#include "VLCPlayer.h"
 
 class QVPlayer : public QMainWindow
 {
@@ -15,9 +16,11 @@ public:
 private slots:
 	void on_playBtn_clicked();
 	void on_exitBtn_clicked();
+	void on_durationSlider_valueChanged(int value);
 
 private:
 	Ui::QVPlayerClass ui;
+	VLCPlayer _player;
 };
 
 #endif // QVPLAYER_H

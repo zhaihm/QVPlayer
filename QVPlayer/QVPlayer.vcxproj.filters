@@ -56,6 +56,9 @@
     <ClCompile Include="GeneratedFiles\qrc_qvplayer.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="VLCPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="qvplayer.h">
@@ -335,6 +338,9 @@
     </ClInclude>
     <ClInclude Include="vlc\plugins\vlc_xml.h">
       <Filter>Header Files\vlc\plugins</Filter>
+    </ClInclude>
+    <ClInclude Include="VLCPlayer.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

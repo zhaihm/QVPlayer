@@ -93,6 +93,7 @@
     </ClCompile>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="qvplayer.cpp" />
+    <ClCompile Include="VLCPlayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="qvplayer.h">
@@ -120,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_qvplayer.h" />
+    <ClInclude Include="VLCPlayer.h" />
     <ClInclude Include="vlc\deprecated.h" />
     <ClInclude Include="vlc\libvlc.h" />
     <ClInclude Include="vlc\libvlc_events.h" />
