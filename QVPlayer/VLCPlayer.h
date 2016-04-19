@@ -18,6 +18,8 @@ public:
 	int length();
 	void setVolume(int volume);
 	int volume();
+	void setMute(bool mute);
+	bool isMute();
 
 private:
 	libvlc_instance_t		*_instance;

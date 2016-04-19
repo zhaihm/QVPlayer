@@ -19,6 +19,7 @@ private slots:
 	void on_stopBtn_clicked();
 	void on_durationSlider_valueChanged(int value);
 	void on_volumeSlider_valueChanged(int value);
+	void on_muteBtn_clicked();
 
 private:
 	Ui::QVPlayerClass ui;

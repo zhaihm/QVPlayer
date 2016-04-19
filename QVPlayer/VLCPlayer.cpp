@@ -90,3 +90,15 @@ int VLCPlayer::volume()
 	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
 	return libvlc_audio_get_volume(_mediaPlayer);
 }
+
+void VLCPlayer::setMute(bool mute)
+{
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
+	libvlc_audio_set_mute(_mediaPlayer, mute ? 1 : 0);
+}
+
+bool VLCPlayer::isMute()
+{
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
+	return libvlc_audio_get_mute(_mediaPlayer) == 1;
+}

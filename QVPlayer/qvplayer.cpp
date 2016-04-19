@@ -53,6 +53,7 @@ void QVPlayer::on_stopBtn_clicked()
 	_player.stop();
 	ui.pauseBtn->hide();
 	ui.playBtn->show();
+	ui.durationSlider->setValue(0);
 }
 
 void QVPlayer::on_durationSlider_valueChanged(int value)
@@ -65,4 +66,15 @@ void QVPlayer::on_volumeSlider_valueChanged(int value)
 {
 	qDebug() << "Volume slider value changed, new value" << value;
 	_player.setVolume(MAX_VOLUME * value / ui.volumeSlider->maximum());
+}
+
+void QVPlayer::on_muteBtn_clicked()
+{
+	if (!_player.isMute()) {
+		_player.setMute(true);
+		ui.muteBtn->setText("Unmute");
+	} else {
+		_player.setMute(false);
+		ui.muteBtn->setText("Mute");
+	}
 }
