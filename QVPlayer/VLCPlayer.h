@@ -16,6 +16,8 @@ public:
 	bool isStopped();
 	void setDuration(int ms);
 	int length();
+	void setVolume(int volume);
+	int volume();
 
 private:
 	libvlc_instance_t		*_instance;

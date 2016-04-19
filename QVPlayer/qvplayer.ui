@@ -27,7 +27,7 @@
    <widget class="QToolButton" name="playBtn">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>530</x>
       <y>330</y>
       <width>61</width>
       <height>19</height>
@@ -53,7 +53,7 @@
    <widget class="QToolButton" name="stopBtn">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>470</x>
       <y>330</y>
       <width>51</width>
       <height>19</height>
@@ -66,7 +66,7 @@
    <widget class="QToolButton" name="pauseBtn">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>530</x>
       <y>330</y>
       <width>61</width>
       <height>19</height>
@@ -74,6 +74,19 @@
     </property>
     <property name="text">
      <string>Pause</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="volumeSlider">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>330</y>
+      <width>91</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
   </widget>

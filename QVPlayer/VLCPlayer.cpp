@@ -1,6 +1,7 @@
 #include "VLCPlayer.h"
 #include <QtWidgets>
 #include <QDebug>
+#include <QtGlobal>
 
 VLCPlayer::VLCPlayer()
 {
@@ -14,10 +15,7 @@ VLCPlayer::~VLCPlayer()
 
 void VLCPlayer::init(HWND hWnd)
 {
-	if (_instance != NULL || _mediaPlayer != NULL) {
-		qDebug() << "Already has a vlc instance running!";
-		return;
-	}
+	Q_ASSERT_X(_instance == NULL && _mediaPlayer == NULL, __FUNCTION__, "Already has a vlc instance running!");
 
 	if (NULL == (_instance = libvlc_new(0, NULL))) {
 		qDebug() << "libvlc_new failed: " << libvlc_errmsg();
@@ -32,10 +30,8 @@ void VLCPlayer::init(HWND hWnd)
 
 void VLCPlayer::play(const char *path /*= NULL*/)
 {
-	if (_instance == NULL || _mediaPlayer == NULL) {
-		qDebug() << "Media player not initialized!";
-		return;
-	}
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
+
 	if (path != NULL) {
 		libvlc_media_t *media;
 		if (NULL == (media = libvlc_media_new_path(_instance, path))) {
@@ -49,54 +45,48 @@ void VLCPlayer::play(const char *path /*= NULL*/)
 
 void VLCPlayer::pause()
 {
-	if (_mediaPlayer == NULL) {
-		qDebug() << "Media player not initialized!";
-		return;
-	}
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
 	libvlc_media_player_pause(_mediaPlayer);
 }
 
 void VLCPlayer::stop()
 {
-	if (_mediaPlayer == NULL) {
-		qDebug() << "Media player not initialized!";
-		return;
-	}
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
 	libvlc_media_player_stop(_mediaPlayer);
 }
 
 bool VLCPlayer::isPaused()
 {
-	if (_mediaPlayer == NULL) {
-		qDebug() << "Media player not initialized!";
-		return false;;
-	}
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
 	return libvlc_Paused == libvlc_media_player_get_state(_mediaPlayer);
 }
 
 bool VLCPlayer::isStopped()
 {
-	if (_mediaPlayer == NULL) {
-		qDebug() << "Media player not initialized!";
-		return false;;
-	}
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
 	return libvlc_Stopped == libvlc_media_player_get_state(_mediaPlayer);
 }
 
 void VLCPlayer::setDuration(int ms)
 {
-	if (_mediaPlayer == NULL) {
-		qDebug() << "Media player not initialized!";
-		return;
-	}
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
 	libvlc_media_player_set_time(_mediaPlayer, ms);
 }
 
 int VLCPlayer::length()
 {
-	if (_mediaPlayer == NULL) {
-		qDebug() << "Media player not initialized!";
-		return -1;
-	}
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
 	return libvlc_media_player_get_length(_mediaPlayer);
+}
+
+void VLCPlayer::setVolume(int volume)
+{
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
+	libvlc_audio_set_volume(_mediaPlayer, volume);
+}
+
+int VLCPlayer::volume()
+{
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
+	return libvlc_audio_get_volume(_mediaPlayer);
 }
