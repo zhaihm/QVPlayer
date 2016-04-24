@@ -2,6 +2,7 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QFileDialog>
+#include <QTimer>
 
 #define MAX_VOLUME	100
 
@@ -11,6 +12,9 @@ QVPlayer::QVPlayer(QWidget *parent)
 	ui.setupUi(this);
 	ui.pauseBtn->hide();
 	_player.init((HWND)ui.videoWnd->winId());
+	_updateDurationSliderTimer = new QTimer;
+	connect(_updateDurationSliderTimer, SIGNAL(timeout()), SLOT(on_updateDurationSliderTimer_timeout()));
+	_updateDurationSliderTimer->start(300);
 }
 
 QVPlayer::~QVPlayer()
@@ -77,4 +81,10 @@ void QVPlayer::on_muteBtn_clicked()
 		_player.setMute(false);
 		ui.muteBtn->setText("Mute");
 	}
+}
+
+void QVPlayer::on_updateDurationSliderTimer_timeout()
+{
+	qDebug() << "updateDurationSliderTimer timeout";
+	ui.durationSlider->setSliderPosition(ui.durationSlider->maximum() * _player.duration() / _player.length());
 }

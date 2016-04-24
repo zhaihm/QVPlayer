@@ -73,6 +73,12 @@ void VLCPlayer::setDuration(int ms)
 	libvlc_media_player_set_time(_mediaPlayer, ms);
 }
 
+int VLCPlayer::duration()
+{
+	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!"); \
+	return libvlc_media_player_get_time(_mediaPlayer);
+}
+
 int VLCPlayer::length()
 {
 	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");

@@ -15,6 +15,7 @@ public:
 	bool isPaused();
 	bool isStopped();
 	void setDuration(int ms);
+	int duration();
 	int length();
 	void setVolume(int volume);
 	int volume();

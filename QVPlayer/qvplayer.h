@@ -20,10 +20,12 @@ private slots:
 	void on_durationSlider_valueChanged(int value);
 	void on_volumeSlider_valueChanged(int value);
 	void on_muteBtn_clicked();
+	void on_updateDurationSliderTimer_timeout();
 
 private:
 	Ui::QVPlayerClass ui;
 	VLCPlayer _player;
+	QTimer *_updateDurationSliderTimer;
 };
 
 #endif // QVPLAYER_H
