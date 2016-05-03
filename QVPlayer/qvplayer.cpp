@@ -85,6 +85,14 @@ void QVPlayer::on_muteBtn_clicked()
 
 void QVPlayer::on_updateDurationSliderTimer_timeout()
 {
+    if (_player.length() == 0)
+        return;
+
 	qDebug() << "updateDurationSliderTimer timeout";
 	ui.durationSlider->setSliderPosition(ui.durationSlider->maximum() * _player.duration() / _player.length());
+}
+
+void QVPlayer::on_snapshotBtn_clicked()
+{
+    _player.takeSnapshot();
 }

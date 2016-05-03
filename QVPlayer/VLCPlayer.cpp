@@ -108,3 +108,9 @@ bool VLCPlayer::isMute()
 	Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
 	return libvlc_audio_get_mute(_mediaPlayer) == 1;
 }
+
+void VLCPlayer::takeSnapshot()
+{
+    Q_ASSERT_X(_instance != NULL && _mediaPlayer != NULL, __FUNCTION__, "Media player not initialized!");
+    libvlc_video_take_snapshot(_mediaPlayer, 0, "D:\\", 0, 0);
+}

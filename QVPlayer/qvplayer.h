@@ -21,6 +21,7 @@ private slots:
 	void on_volumeSlider_valueChanged(int value);
 	void on_muteBtn_clicked();
 	void on_updateDurationSliderTimer_timeout();
+    void on_snapshotBtn_clicked();
 
 private:
 	Ui::QVPlayerClass ui;

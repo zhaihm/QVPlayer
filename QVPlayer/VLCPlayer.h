@@ -21,6 +21,7 @@ public:
 	int volume();
 	void setMute(bool mute);
 	bool isMute();
+    void takeSnapshot();
 
 private:
 	libvlc_instance_t		*_instance;
