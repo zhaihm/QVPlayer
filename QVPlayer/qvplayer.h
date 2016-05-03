@@ -13,6 +13,9 @@ public:
 	QVPlayer(QWidget *parent = 0);
 	~QVPlayer();
 
+protected:
+    virtual bool eventFilter(QObject *watched, QEvent *event);
+
 private slots:
 	void on_playBtn_clicked();
 	void on_pauseBtn_clicked();

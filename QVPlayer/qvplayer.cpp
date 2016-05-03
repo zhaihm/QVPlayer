@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QTimer>
+#include <QMouseEvent>
 
 #define MAX_VOLUME	100
 
@@ -11,7 +12,11 @@ QVPlayer::QVPlayer(QWidget *parent)
 {
 	ui.setupUi(this);
 	ui.pauseBtn->hide();
+    ui.durationSlider->installEventFilter(this);
+    ui.volumeSlider->installEventFilter(this);
+
 	_player.init((HWND)ui.videoWnd->winId());
+
 	_updateDurationSliderTimer = new QTimer;
 	connect(_updateDurationSliderTimer, SIGNAL(timeout()), SLOT(on_updateDurationSliderTimer_timeout()));
 	_updateDurationSliderTimer->start(300);
@@ -19,6 +24,21 @@ QVPlayer::QVPlayer(QWidget *parent)
 
 QVPlayer::~QVPlayer()
 {
+}
+
+bool QVPlayer::eventFilter(QObject *watched, QEvent *event)
+{
+    if (watched == ui.durationSlider && event->type() == QEvent::MouseButtonPress) {
+        QMouseEvent *e = (QMouseEvent *)event;
+        ui.durationSlider->setValue(ui.durationSlider->maximum() * e->pos().x() / ui.durationSlider->width());
+        _player.setDuration(_player.length() * e->pos().x() / ui.durationSlider->width());
+    }
+    else if (watched == ui.volumeSlider && event->type() == QEvent::MouseButtonPress) {
+        QMouseEvent *e = (QMouseEvent *)event;
+        ui.volumeSlider->setValue(ui.volumeSlider->maximum() * e->pos().x() / ui.volumeSlider->width());
+        _player.setVolume(ui.volumeSlider->maximum() * e->pos().x() / ui.volumeSlider->width());
+    }
+    return QMainWindow::eventFilter(watched, event);
 }
 
 void QVPlayer::on_playBtn_clicked()
